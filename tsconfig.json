@@ -15,6 +15,7 @@
     "experimentalDecorators": true,
     "moduleResolution": "bundler",
     "importHelpers": true,
+    "sourceMap": true,
     "target": "ES2022",
     "module": "ES2022",
     "paths": {
@@ -47,6 +48,9 @@
       ],
       "~environments/*": [
         "./src/environments/*"
+      ],
+      "common-service": [
+        "../common-service/dist/common-service/"
       ],
     }
   },
