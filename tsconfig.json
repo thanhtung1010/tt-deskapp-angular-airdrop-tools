@@ -16,7 +16,39 @@
     "moduleResolution": "bundler",
     "importHelpers": true,
     "target": "ES2022",
-    "module": "ES2022"
+    "module": "ES2022",
+    "paths": {
+      "@components": [
+        "./src/app/components"
+      ],
+      "@services": [
+        "./src/app/services"
+      ],
+      "@pages": [
+        "./src/app/pages"
+      ],
+      "@enums": [
+        "./src/app/enums"
+      ],
+      "@interfaces": [
+        "./src/app/interfaces"
+      ],
+      "@pipes": [
+        "./src/app/pipes"
+      ],
+      "@directives": [
+        "./src/app/directives"
+      ],
+      "@models": [
+        "./src/app/models"
+      ],
+      "@helpers": [
+        "./src/app/helpers"
+      ],
+      "~environments/*": [
+        "./src/environments/*"
+      ],
+    }
   },
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,

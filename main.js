@@ -15,13 +15,14 @@ function createWindow() {
     },
   });
 
-  win.loadURL(
-    url.format({
-      pathname: path.join(__dirname, 'dist/tt-deskapp-angular-airdrop-tools/browser/index.html'),
-      protocol: 'file:',
-      slashes: true,
-    })
-  );
+  win.loadURL('http://localhost:5000/');
+  // win.loadURL(
+  //   url.format({
+  //     pathname: path.join(__dirname, 'dist/tt-deskapp-angular-airdrop-tools/browser/index.html'),
+  //     protocol: 'file:',
+  //     slashes: true,
+  //   })
+  // );
 
   win.on('closed', () => {
     win = null;
