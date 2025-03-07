@@ -1,0 +1,17 @@
+&-version {
+  color: #{$whiteColor};
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 0;
+  font-size: 12px;
+  opacity: .8;
+}
+
+@media only screen and (max-width: 500px) {
+
+  &-version {
+    padding: 20px;
+  }
+
+}

@@ -1,0 +1,53 @@
+{
+  "seo": {
+    "title": "My Portfolio",
+    "title_not_found": "404 :(",
+    "title_portpolio_home": "Portfolio - Home",
+    "title_portpolio_about_me": "Portfolio - About Me",
+    "manager": "Manager",
+    "manager_auth": "Manager - Auth"
+  },
+  "lang": {
+    "vi": "Tiếng Việt",
+    "en": "Tiếng Anh"
+  },
+  "menu": {
+    "home": "Trang chủ"
+  },
+  "common": {
+  },
+  "button": {
+    "search": "Tìm kiếm",
+    "add": "Thêm mới",
+    "save": "Lưu",
+    "refresh": "Làm mới",
+    "reset": "Quay về bộ lọc mặc định",
+    "cancel": "Huỷ",
+    "ok": "Đồng ý"
+  },
+  "message": {
+    "system_error": "Lỗi!!!",
+    "system_success": "Thành công.",
+    "no_data": "Không có dữ liệu.",
+    "somthing_was_wrong": "Lỗi không xác định, liên hệ với quản trị viên để được giải quyết."
+  },
+  "label": {
+    "name_input_winfit": "Nhập tên người dùng",
+    "email_input": "Nhập email",
+    "phone_number_input": "Nhập số điện thoại (+84)"
+  },
+  "placeholder": {
+    "name_input": "Nguyễn Văn A",
+    "email_input": "abc@gmail.com",
+    "phone_number_input": "083*****70"
+  },
+  "table": {
+    "select": ""
+  },
+  "gender": {
+    "title": "Giới Tính",
+    "man": "Nam",
+    "woman": "Nữ"
+  },
+  "EMPTY": ""
+}

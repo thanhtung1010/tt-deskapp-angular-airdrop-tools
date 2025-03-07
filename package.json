@@ -1,7 +1,7 @@
 {
   "name": "tt-deskapp-angular-airdrop-tools",
   "version": "0.0.0",
-  "main": "main.js",
+  "main": "electron.config.js",
   "scripts": {
     "ng": "ng",
     "start": "ng serve -o",

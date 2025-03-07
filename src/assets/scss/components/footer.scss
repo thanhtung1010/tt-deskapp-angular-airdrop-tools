@@ -1,0 +1,178 @@
+&-footer {
+  overflow: hidden;
+  padding-top: 100px;
+  color: #{$whiteColor};
+  font-size: #{$mediumFontSize};
+  z-index: 5;
+
+  &-content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #{$purpleColor};
+    padding: 120px 240px 0 240px;
+  }
+
+  &-info {
+    display: flex;
+    gap: 50px;
+    padding: 0 50px;
+    width: 100%;
+    margin-bottom: 50px;
+
+    &-content {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: left;
+      align-items: flex-start;
+      text-align: left;
+      gap: 20px;
+
+      h3 {
+        margin-bottom: 30px;
+        font-size: #{$laggerFontSize};
+        font-weight: 700;
+        color: #{$whiteColor};
+      }
+    }
+
+    &-social_network {
+      display: flex;
+      flex-wrap: wrap;
+    }
+  }
+
+  &-contact_wrap {
+    max-width: 1000px;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50% , -50%);
+  }
+
+  &-contact {
+    padding: 50px 20px;
+    font-weight: 500;
+    margin: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    border-radius: 30px;
+    background: #141C3A;
+    box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.25);
+  }
+
+  &-line {
+    width: 100%;
+    height: 2px;
+    background: #{$greenColor};
+  }
+}
+
+@media only screen and (max-width: 1400px) {
+
+  &-footer {
+
+    &-content {
+      padding: 120px 200px 0 200px;
+    }
+  }
+
+}
+
+@media only screen and (max-width: 1250px) {
+
+  &-footer {
+
+    &-content {
+      padding: 120px 120px 0 120px;
+    }
+
+    &-info {
+      padding: 0 25px;
+      gap: 25px;
+      margin-bottom: 25px;
+    }
+  }
+
+}
+
+@media only screen and (max-width: 1000px) {
+
+  &-footer {
+
+    &-content {
+      padding: 120px 60px 0 60px;
+    }
+  }
+
+}
+
+@media only screen and (max-width: 750px) {
+
+  &-footer {
+
+    &-contact {
+      flex-direction: column;
+      justify-content: center;
+      gap: 20px;
+      padding: 30px 20px;
+    }
+
+    &-info {
+
+      ._logo {
+        display: none;
+      }
+    }
+  }
+
+}
+
+@media only screen and (max-width: 650px) {
+
+  &-footer {
+
+    &-info {
+      padding: 0 10px;
+
+      &-content {
+        gap: 10px;
+
+        h3 {
+          margin-bottom: 20px;
+          font-size: #{$mediumFontSize};
+          font-weight: 700;
+          color: #{$whiteColor};
+        }
+
+        p {
+          font-size: 12px;
+        }
+      }
+    }
+  }
+
+}
+
+@media only screen and (max-width: 500px) {
+
+  &-footer {
+
+    &-info {
+      flex-direction: column;
+
+      ._social_media {
+        justify-content: right;
+        align-items: flex-end;
+        text-align: right;
+      }
+    }
+  }
+
+}

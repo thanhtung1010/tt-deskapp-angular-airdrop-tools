@@ -1,9 +1,13 @@
 import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { CreateDocumentModel, FirebaseCollectionService, FirebaseService } from 'common-service';
-import { Expose } from 'class-transformer';
+import { RouterOutlet } from '@angular/router';
+import { SVG_DATA } from '@enums';
+import { TranslateService } from '@ngx-translate/core';
+import { SvgIconRegistryService } from 'angular-svg-icon';
+import { FirebaseService } from 'common-service';
+import { forkJoin, Observable } from 'rxjs';
+import { environment } from '~environments/environment';
 
 @Component({
   selector: 'tt-root',
@@ -18,42 +22,25 @@ import { Expose } from 'class-transformer';
 })
 export class AppComponent implements OnInit {
   title = 'tt-deskapp-angular-airdrop-tools';
-  name: string = '';
-  code: string = '';
 
   constructor(
     private fbService: FirebaseService,
-    private fbCollectionService: FirebaseCollectionService<ICommon>,
+    private iconReg: SvgIconRegistryService,
+    private translateService: TranslateService,
   ) {}
 
   ngOnInit(): void {
-    this.fbService.init().subscribe(resp => {
-      console.warn('init firebase success')
+    this.fbService.init().subscribe(resp => {});
+
+    this.translateService.addLangs(['vi']);
+    this.translateService.setDefaultLang('vi');
+    this.translateService.use('vi');
+
+    const svgRegisReqs: Array<Observable<SVGElement | undefined>> = [];
+    SVG_DATA.forEach(svg => {
+      svgRegisReqs.push(this.iconReg.loadSvg(`${environment.assetsUrl}/assets/icons/${svg.path}`, svg.key) as Observable<SVGElement | undefined>);
     });
-    this.fbCollectionService.collection = 'TEST';
+
+    forkJoin(svgRegisReqs).subscribe(resp => {})
   }
-
-  submit() {
-    const data = {
-      name: this.name,
-      code: this.code,
-    }
-    this.fbCollectionService.addNewDocument(CommonModel.fromJson(data)).subscribe(resp => {
-      console.log(resp);
-
-    })
-  }
-}
-
-export class CommonModel extends CreateDocumentModel {
-  @Expose()
-  name!: string;
-
-  @Expose()
-  code!: string;
-}
-
-export interface ICommon {
-  name: string;
-  code: string;
 }

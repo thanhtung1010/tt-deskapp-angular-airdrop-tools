@@ -1,0 +1,42 @@
+&-header {
+  height: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 30px;
+  position: fixed;
+  width: 100%;
+  z-index: 10;
+
+  &-hidden {
+    transform: translateY(-100%);
+  }
+}
+
+&-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+
+  h1 {
+    color: #000;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+  }
+
+  &-footer {
+
+    h1 {
+      color: #{$whiteColor};
+    }
+  }
+}
+
+&-menu-icon {
+  height: 40px;
+  width: 40px;
+  cursor: pointer;
+}
