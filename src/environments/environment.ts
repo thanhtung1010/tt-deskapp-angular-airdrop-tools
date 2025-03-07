@@ -5,7 +5,7 @@ export const environment: IEnvironmentConFig = {
   defaultLang: 'vi',
   lang: '_lang',
   tokenKey: '_token',
-  assetsUrl: 'http://localhost:500/',
+  assetsUrl: 'http://localhost:5000',
   apiUrl: '',
   email: 'trinhthanhtung1010@gmail.com',
   phoneNumber: '+84836450670',

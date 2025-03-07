@@ -12,7 +12,10 @@
     "en": "Tiếng Anh"
   },
   "menu": {
-    "home": "Trang chủ"
+    "auth_login": "Đăng nhập",
+    "auth_signup": "Đăng ký",
+    "home": "Trang chủ",
+    "genealogy": "Gia phả"
   },
   "common": {
   },

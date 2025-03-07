@@ -12,7 +12,8 @@ import { environment } from '~environments/environment';
 @Component({
   selector: 'tt-root',
   templateUrl: './app.component.html',
-  styleUrl: './app.component.sass',
+  styleUrl: './app.component.scss',
+  standalone: true,
   imports: [
     RouterOutlet,
     CommonModule,
@@ -21,7 +22,6 @@ import { environment } from '~environments/environment';
   ],
 })
 export class AppComponent implements OnInit {
-  title = 'tt-deskapp-angular-airdrop-tools';
 
   constructor(
     private fbService: FirebaseService,
