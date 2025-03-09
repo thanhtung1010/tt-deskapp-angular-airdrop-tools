@@ -15,7 +15,7 @@ function createWindow() {
     },
   });
 
-  win.loadURL('http://localhost:5000/');
+  win.loadURL('http://localhost:8080/');
   // win.loadURL(
   //   url.format({
   //     pathname: path.join(__dirname, 'dist/tt-deskapp-angular-airdrop-tools/browser/index.html'),

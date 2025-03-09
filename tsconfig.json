@@ -43,6 +43,9 @@
       "@models": [
         "./src/app/models"
       ],
+      "@guards": [
+        "./src/app/guards"
+      ],
       "@helpers": [
         "./src/app/helpers"
       ],

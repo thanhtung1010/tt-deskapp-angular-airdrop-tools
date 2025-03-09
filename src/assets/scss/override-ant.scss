@@ -1,3 +1,5 @@
+@use "variable.scss";
+
 * {
   label {
     // color: $mainColor;
@@ -7,18 +9,18 @@
   .ant-form-item,
   .ant-tabs-tab-btn,
   .ant-input {
-    color: $grey;
+    color: variable.$grey;
 
     .readonly {
       cursor: not-allowed;
 
       &:hover {
-        border-color: $normal-border;
+        border-color: variable.$normal-border;
       }
 
       &:focus {
         box-shadow: none;
-        border-color: $normal-border;
+        border-color: variable.$normal-border;
       }
     }
   }
@@ -49,7 +51,7 @@
 
   .ant-table-thead,
   .ant-table-header {
-    background-color: $whiteColor;
+    background-color: variable.$whiteColor;
     overflow-y: hidden !important;
 
     > tr > th {
@@ -62,7 +64,7 @@
   }
 
   .ant-pagination-item-active a {
-    color: $whiteColor;
+    color: variable.$whiteColor;
     font-weight: bold;
   }
 
@@ -81,14 +83,14 @@
   }
 
   .ant-collapse {
-    background-color: $whiteColor;
+    background-color: variable.$whiteColor;
   }
 
   .ant-collapse-header {
     display: flex;
     flex-wrap: nowrap;
     padding: 4px 4px 4px 24px !important;
-    background-color: $whiteColor !important;
+    background-color: variable.$whiteColor !important;
     border-radius: 8px !important;
   }
 
@@ -161,20 +163,20 @@
 
       .ant-picker-input {
         > input[disabled] {
-          color: $normal-color;
+          color: variable.$normal-color;
         }
       }
     }
   }
 
   .ant-table-row-expand-icon {
-    border-color: $whiteColor;
-    color: $grey  !important;
+    border-color: variable.$whiteColor;
+    color: variable.$grey  !important;
 
     &:hover,
     &:active,
     &:focus {
-      color: $mainColor !important;
+      color: variable.$mainColor !important;
     }
   }
 
@@ -208,8 +210,8 @@
 
   .ant-select-item-option-selected:not(.ant-select-item-option-disabled),
   .ant-select-item-option-active:not(.ant-select-item-option-disabled) {
-    color: $mainColor;
-    background-color: $headerMidVgColor;
+    color: variable.$mainColor;
+    background-color: variable.$headerMidVgColor;
     font-weight: bold;
     position: relative;
 
@@ -217,7 +219,7 @@
       content: '';
       position: absolute;
       width: 4px;
-      background-color: $mainColor;
+      background-color: variable.$mainColor;
       height: 100%;
       top: 0%;
       right: 0;
@@ -228,11 +230,11 @@
   .ant-picker-ranges {
     .ant-picker-preset {
       .ant-tag {
-        background-color: $whiteColor;
+        background-color: variable.$whiteColor;
 
         &:hover {
           background-color: colorMainRgba(1);
-          color: $whiteColor;
+          color: variable.$whiteColor;
         }
       }
     }
@@ -241,7 +243,7 @@
   .ant-radio-group {
     .ant-radio-disabled {
       + span {
-        color: $normal-color;
+        color: variable.$normal-color;
       }
     }
   }
@@ -270,11 +272,11 @@
 
     .ant-dropdown-menu {
       .ant-dropdown-menu-item {
-        color: $mainColor;
+        color: variable.$mainColor;
 
         &:active {
-          background-color: $mainColor;
-          color: $whiteColor;
+          background-color: variable.$mainColor;
+          color: variable.$whiteColor;
         }
       }
     }
@@ -297,11 +299,11 @@
   }
 
   .expand-icon-cc {
-    color: $whiteColor;
-    background-color: $mainColor;
-    height: $dcIconWidth;
-    width: $toggleHeight;
-    border-radius: $toggleIconWidth;
+    color: variable.$whiteColor;
+    background-color: variable.$mainColor;
+    height: variable.$dcIconWidth;
+    width: variable.$toggleHeight;
+    border-radius: variable.$toggleIconWidth;
     cursor: pointer;
     display: flex;
     justify-content: center;
@@ -317,7 +319,7 @@
       height: 2px;
       border-radius: 1px;
       width: 10px;
-      background-color: $whiteColor;
+      background-color: variable.$whiteColor;
 
       &.line-vertical {
         transition: all 0.4s ease;
@@ -547,7 +549,7 @@
 
         .ant-table-cell {
           border-bottom: unset;
-          font-size: #{$laggerFontSize};
+          font-size: #{variable.$laggerFontSize};
           font-weight: 500;
           padding-left: 32px;
           vertical-align: baseline;
@@ -581,13 +583,13 @@
     }
 
     .ant-btn {
-      border-color: #{$purpleColor} !important;
-      color: #{$whiteColor} !important;
-      background-color: #{$purpleColor} !important;
+      border-color: #{variable.$purpleColor} !important;
+      color: #{variable.$whiteColor} !important;
+      background-color: #{variable.$purpleColor} !important;
       opacity: .8;
 
       &:hover {
-        border-color: #{$purpleColor} !important;
+        border-color: #{variable.$purpleColor} !important;
       }
     }
   }
@@ -595,11 +597,11 @@
   .tt-login_container {
 
     .ant-input {
-      font-size: #{$mediumFontSize} !important;
+      font-size: #{variable.$mediumFontSize} !important;
     }
 
     .ant-input-affix-wrapper {
-      font-size: #{$mediumFontSize} !important;
+      font-size: #{variable.$mediumFontSize} !important;
     }
   }
 
@@ -620,7 +622,7 @@
   .tt-theme-primary {
 
     .ant-input:hover, .ant-input:focus, .ant-input-affix-wrapper:hover, .ant-input-affix-wrapper.focus , .ant-input-affix-wrapper-focused {
-      border-color: #{$purpleColor} !important;
+      border-color: #{variable.$purpleColor} !important;
       box-shadow: unset !important;
     }
 
@@ -628,22 +630,22 @@
 
       .ant-btn {
         height: 40px;
-        font-size: #{$mediumFontSize};
+        font-size: #{variable.$mediumFontSize};
       }
 
       .ant-btn-primary {
-        background-color: #{$purpleColor};
-        border-color: #{$purpleColor};
+        background-color: #{variable.$purpleColor};
+        border-color: #{variable.$purpleColor};
       }
 
       .ant-btn-default {
-        color: #{$purpleColor};
-        border-color: #{$purpleColor};
+        color: #{variable.$purpleColor};
+        border-color: #{variable.$purpleColor};
       }
 
       .ant-btn-primary:hover, .ant-btn-primary:focus {
-        background-color: #{$purpleColor};
-        border-color: #{$purpleColor};
+        background-color: #{variable.$purpleColor};
+        border-color: #{variable.$purpleColor};
       }
 
       .ant-btn-primary:hover {
@@ -654,22 +656,22 @@
     .tt-wrapper {
 
       .tt-label, .ant-table-thead .ant-table-cell {
-        color: #{$mainColor};
+        color: #{variable.$mainColor};
       }
 
       .ant-btn-primary {
-        background-color: #{$mainColor};
-        border-color: #{$mainColor};
+        background-color: #{variable.$mainColor};
+        border-color: #{variable.$mainColor};
       }
 
       .ant-btn-default {
-        color: #{$mainColor};
-        border-color: #{$mainColor};
+        color: #{variable.$mainColor};
+        border-color: #{variable.$mainColor};
       }
 
       .ant-btn-primary:hover, .ant-btn-primary:focus {
-        background-color: #{$mainColor};
-        border-color: #{$mainColor};
+        background-color: #{variable.$mainColor};
+        border-color: #{variable.$mainColor};
       }
 
       .ant-btn-primary:hover {

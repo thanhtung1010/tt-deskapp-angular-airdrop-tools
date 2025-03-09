@@ -1,5 +1,7 @@
+@use "variable.scss";
+
 &-version {
-  color: #{$whiteColor};
+  color: #{variable.$whiteColor};
   display: flex;
   justify-content: center;
   align-items: center;

@@ -1,0 +1,7 @@
+@use '../variable.scss';
+
+@layer base {
+  :root {
+    --spacing: #{variable.$step};
+  }
+}

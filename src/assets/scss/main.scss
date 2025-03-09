@@ -1,25 +1,23 @@
-@import 'variable.scss';
-@import 'override-ant.scss';
+@use './variable.scss';
+@use './base/base.scss';
+@use './components/components.scss';
+@use './utilities/utilities.scss';
 
-.#{$mainCls} {
+.#{variable.$mainCls} {
   scroll-behavior: smooth;
   -webkit-overflow-scrolling: touch;
-  position: relative;
-
-  @import 'components/index.scss';
-  @import 'shared.scss';
 
   &-theme-primary {
-    margin: unset;
     position: relative;
     overflow: auto;
     display: flex;
     flex-direction: column;
-    font-size: $mainFontSize;
-    font-weight: $mainFontweight;
+    font-size: variable.$mainFontSize;
+    font-weight: variable.$mainFontweight;
     font-style: normal;
     line-height: normal;
     z-index: inherit;
+    background: transparent;
 
     &::-webkit-scrollbar {
       width: 8px;
@@ -31,12 +29,12 @@
     }
 
     &::-webkit-scrollbar-thumb {
-      background: $scrollBarColor;
+      background: variable.$scrollBarColor;
       border-radius: 10px;
     }
 
     &::-webkit-scrollbar-thumb:hover {
-      background: $scrollBarHoverColor;
+      background: variable.$scrollBarHoverColor;
       width: 10px;
     }
 
@@ -65,7 +63,6 @@
       &::-webkit-scrollbar {
         width: 4px;
       }
-
     }
   }
 }

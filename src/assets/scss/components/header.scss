@@ -1,3 +1,5 @@
+@use "../variable.scss";
+
 &-header {
   height: 100px;
   display: flex;
@@ -30,7 +32,7 @@
   &-footer {
 
     h1 {
-      color: #{$whiteColor};
+      color: #{variable.$whiteColor};
     }
   }
 }

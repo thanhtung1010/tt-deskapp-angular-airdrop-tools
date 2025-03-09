@@ -1,29 +1,31 @@
+@use "variable.scss";
+
 &-table {
   margin: 12px auto;
 
   & th {
     $lists: bottom, top, left, right;
     &.border {
-      border: 1px solid $boxBorderColor1;
+      border: 1px solid variable.$boxBorderColor1;
     }
     @each $direction in $lists {
       &.border-#{$direction} {
-        border-#{$direction}: 1px solid $boxBorderColor1;
+        border-#{$direction}: 1px solid variable.$boxBorderColor1;
       }
     }
 
     &.light-yellow {
-      background-color: $headerYellow;
+      background-color: variable.$headerYellow;
     }
     &.light-blue {
-      background-color: $headerLightBlue;
+      background-color: variable.$headerLightBlue;
     }
     &.border-bottom {
-      border-bottom: 1px solid $boxBorderColor1 !important;
+      border-bottom: 1px solid variable.$boxBorderColor1 !important;
     }
 
     &.tt-thead-batch {
-      color: $mainColor;
+      color: variable.$mainColor;
       font-weight: 500;
       font-size: 1.025em;
     }
@@ -95,7 +97,7 @@
             }
             .vertical {
               width: 1px;
-              background-color: $headerRightDivider;
+              background-color: variable.$headerRightDivider;
               height: 20px;
               display: inline-block;
               margin: 0 6px;
@@ -105,9 +107,9 @@
               height: 22px;
               transition: transform 0.23s linear;
               &.white {
-                fill: $whiteColor;
+                fill: variable.$whiteColor;
                 use {
-                  fill: $whiteColor;
+                  fill: variable.$whiteColor;
                 }
               }
             }
@@ -116,9 +118,9 @@
               height: 22px;
               transition: transform 0.23s linear;
               &.white {
-                fill: $whiteColor;
+                fill: variable.$whiteColor;
                 use {
-                  fill: $whiteColor;
+                  fill: variable.$whiteColor;
                 }
               }
             }
@@ -140,14 +142,14 @@
     }
     &-toggle {
       position: fixed;
-      height: $tableToggleFilterHeight;
-      width: $tableToggleFilterHeight;
+      height: variable.$tableToggleFilterHeight;
+      width: variable.$tableToggleFilterHeight;
       right: -100%;
       top: 30%;
       border-radius: 8px 0 0 8px;
       border-right: 0;
-      background-color: $whiteColor;
-      color: $grey;
+      background-color: variable.$whiteColor;
+      color: variable.$grey;
       display: flex;
       align-items: center;
       text-align: center;
@@ -171,7 +173,7 @@
       &:focus,
       &:active,
       &.active {
-        background-color: $mainColor;
+        background-color: variable.$mainColor;
         svg.icon {
           filter: brightness(0) invert(1);
         }
@@ -182,10 +184,10 @@
     }
   }
   &-row-child {
-    background-color: $whiteColor;
+    background-color: variable.$whiteColor;
     th {
-      background-color: $whiteColor;
-      color: $mainColor;
+      background-color: variable.$whiteColor;
+      color: variable.$mainColor;
       font-weight: normal;
       font-size: 1.002em;
       min-height: 30px;
@@ -198,8 +200,8 @@
       background-color: white;
     }
     .table-child {
-      background-color: $whiteColor;
-      color: $grey;
+      background-color: variable.$whiteColor;
+      color: variable.$grey;
       margin: 4px 40px;
     }
   }
@@ -213,7 +215,7 @@
       top: -5%;
       width: 110%;
       height: 110%;
-      background-color: $mainColor;
+      background-color: variable.$mainColor;
       opacity: 0.014;
       z-index: 2;
       border-radius: 12px;
@@ -249,7 +251,7 @@
   }
   &-order {
     tr:nth-child(2n + 1) {
-      background-color: $listItem2n;
+      background-color: variable.$listItem2n;
     }
     td:not(.nz-disable-td),
     th:not(.nz-disable-td) {
@@ -257,16 +259,16 @@
     }
     &-group {
       .row {
-        background-color: $listItem2n !important;
+        background-color: variable.$listItem2n !important;
         &.row-parent {
           padding-top: 20px !important;
-          background-color: $listItem2n !important;
+          background-color: variable.$listItem2n !important;
           td {
             font-weight: 500;
           }
         }
         &.row-child {
-          background-color: $whiteColor !important;
+          background-color: variable.$whiteColor !important;
           // &.tr-even {
           //   background-color: $whiteColor !important;
           // }
@@ -274,14 +276,14 @@
 
         &.tr-even {
           &.tr-last {
-            background-color: $whiteColor !important;
+            background-color: variable.$whiteColor !important;
           }
         }
 
         &.tr-last:not(.tr-last-item) {
-          background-color: $whiteColor !important;
+          background-color: variable.$whiteColor !important;
           td {
-            border-bottom: 1px solid $headerRightDivider;
+            border-bottom: 1px solid variable.$headerRightDivider;
             padding-bottom: 20px !important;
             margin-bottom: 5px;
           }
@@ -300,7 +302,7 @@
   }
   &-no-highlight {
     tr {
-      background-color: $whiteColor !important;
+      background-color: variable.$whiteColor !important;
     }
   }
   &-unbreak {
@@ -318,7 +320,7 @@
   }
   &-changed-line {
     td {
-      background-color: $listItem2n;
+      background-color: variable.$listItem2n;
     }
   }
   &-changed-input {
@@ -346,7 +348,7 @@
       }
       .tt,
       .right {
-        color: $mainColor;
+        color: variable.$mainColor;
         font-weight: 400;
       }
     }
@@ -363,7 +365,7 @@
         width: 1px;
         height: 80%;
         top: 5%;
-        background-color: $boxBorderColor1;
+        background-color: variable.$boxBorderColor1;
       }
       &:last-child {
         padding-right: 0;
@@ -386,12 +388,12 @@
   &-green-light {
     height: 15px;
     width: 15px;
-    background-color: $greenColor;
+    background-color: variable.$greenColor;
     border-radius: 50%;
     margin: auto;
 
     &-off {
-      background-color: $grey;
+      background-color: variable.$grey;
     }
   }
 }
@@ -404,7 +406,7 @@
   }
 }
 
-@media only screen and (max-width: #{$breakPointMb}) {
+@media only screen and (max-width: #{variable.$breakPointMb}) {
   &-table {
     overflow: hidden;
     &-filter {

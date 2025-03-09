@@ -4,7 +4,7 @@ export const environment: IEnvironmentConFig = {
   production: true,
   defaultLang: '',
   lang: '',
-  tokenKey: '',
+  token: '',
   assetsUrl: '',
   apiUrl: '',
   email: '',

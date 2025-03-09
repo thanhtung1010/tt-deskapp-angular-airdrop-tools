@@ -17,6 +17,10 @@
     "home": "Trang chủ",
     "genealogy": "Gia phả"
   },
+  "auth": {
+    "google_login": "Đăng nhập bằng Google",
+    "facebook_login": "Đăng nhập bằng Facebook"
+  },
   "common": {
   },
   "button": {
@@ -52,5 +56,5 @@
     "man": "Nam",
     "woman": "Nữ"
   },
-  "EMPTY": ""
+  "empty": ""
 }

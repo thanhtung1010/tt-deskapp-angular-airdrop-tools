@@ -1,30 +1,32 @@
+@use "variable.scss";
+
 &-wrapper {
   min-height: 100vh;
   .inner-content {
-    min-height: calc(100vh - #{$headerHeight});
-    margin-top: #{$headerHeight};
-    padding: $pageContentPadding;
+    min-height: calc(100vh - #{variable.$headerHeight});
+    margin-top: #{variable.$headerHeight};
+    padding: variable.$pageContentPadding;
     box-sizing: border-box;
   }
 }
 
 &-manager-header {
   top: 0;
-  left: $sideBarWidth;
-  height: $headerHeight;
-  width: calc(100% - #{$sideBarWidth});
+  left: variable.$sideBarWidth;
+  height: variable.$headerHeight;
+  width: calc(100% - #{variable.$sideBarWidth});
   position: fixed;
-  z-index: $headerPosition;
-  background-color: $headerMidVgColor;
+  z-index: variable.$headerPosition;
+  background-color: variable.$headerMidVgColor;
   box-shadow: 2px 4px 10px 0 rgba(0, 0, 0, 0.05);
   &-wrapper {
     display: flex;
     align-items: center;
     justify-content: flex-end;
-    height: $headerHeight;
+    height: variable.$headerHeight;
     .left {
       width: 60%;
-      height: $headerHeight;
+      height: variable.$headerHeight;
       overflow: auto hidden;
       max-width: 60%;
 
@@ -39,8 +41,8 @@
         .item {
           display: inline-flex;
           align-items: center;
-          padding: 0 #{$headerLeftIconHeighMargin * 2};
-          padding-left: #{$headerLeftIconHeighMargin * 3};
+          padding: 0 #{variable.$headerLeftIconHeighMargin * 2};
+          padding-left: #{variable.$headerLeftIconHeighMargin * 3};
           cursor: pointer;
           a {
             display: flex;
@@ -48,14 +50,14 @@
             color: black;
           }
           .icon {
-            width: $headerLeftIconHeight;
-            height: $headerLeftIconHeight;
-            margin: $headerLeftIconHeighMargin;
+            width: variable.$headerLeftIconHeight;
+            height: variable.$headerLeftIconHeight;
+            margin: variable.$headerLeftIconHeighMargin;
           }
           img {
-            width: $headerLeftIconHeight;
-            height: $headerLeftIconHeight;
-            margin: $headerLeftIconHeighMargin;
+            width: variable.$headerLeftIconHeight;
+            height: variable.$headerLeftIconHeight;
+            margin: variable.$headerLeftIconHeighMargin;
           }
           .text {
             display: block;
@@ -93,7 +95,7 @@
         .item {
           display: inline-flex;
           align-items: center;
-          padding: 0 #{$headerLeftIconHeighMargin * 3};
+          padding: 0 #{variable.$headerLeftIconHeighMargin * 3};
           // border-left: 1px solid #{$headerRightDivider};
           color: black;
           font-size: 0.95rem;
@@ -104,19 +106,19 @@
             font-size: 0.95rem;
           }
           .icon {
-            width: $headerRightIconHeight;
-            height: $headerRightIconHeight;
-            margin: $headerLeftIconHeighMargin;
+            width: variable.$headerRightIconHeight;
+            height: variable.$headerRightIconHeight;
+            margin: variable.$headerLeftIconHeighMargin;
           }
           img {
-            width: $headerRightIconHeight;
-            height: $headerRightIconHeight;
-            margin: $headerLeftIconHeighMargin;
+            width: variable.$headerRightIconHeight;
+            height: variable.$headerRightIconHeight;
+            margin: variable.$headerLeftIconHeighMargin;
           }
           &::before {
             height: 24px;
             content: "";
-            background-color: $headerRightDivider;
+            background-color: variable.$headerRightDivider;
             width: 1px;
             top: 50%;
             left: 0;
@@ -157,11 +159,11 @@
     }
     &-toggle {
       display: none;
-      height: $toggleHeight;
-      width: $toggleHeight;
-      background: $mainColor;
-      right: $toggleLeft;
-      top: $toggleTop;
+      height: variable.$toggleHeight;
+      width: variable.$toggleHeight;
+      background: variable.$mainColor;
+      right: variable.$toggleLeft;
+      top: variable.$toggleTop;
       position: fixed;
       z-index: 10;
       border-radius: 8px;
@@ -170,14 +172,14 @@
       user-select: none;
       pointer-events: none;
       .icon {
-        height: $toggleIconWidth;
-        width: $toggleIconWidth;
-        fill: $whiteColor;
+        height: variable.$toggleIconWidth;
+        width: variable.$toggleIconWidth;
+        fill: variable.$whiteColor;
       }
       img {
-        height: $toggleIconWidth;
-        width: $toggleIconWidth;
-        fill: $whiteColor;
+        height: variable.$toggleIconWidth;
+        width: variable.$toggleIconWidth;
+        fill: variable.$whiteColor;
         filter: brightness(0) invert(1);
       }
       .toggle-button {
@@ -186,11 +188,11 @@
     }
   }
   &-ava {
-    height: $headerAvatarHeight;
-    width: $headerAvatarHeight;
+    height: variable.$headerAvatarHeight;
+    width: variable.$headerAvatarHeight;
     box-sizing: border-box;
-    border: 2px solid $mainColor;
-    color: $mainColor;
+    border: 2px solid variable.$mainColor;
+    color: variable.$mainColor;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -201,43 +203,43 @@
     }
 
     &.large {
-      height: #{$headerAvatarHeight * 1.5};
-      width: #{$headerAvatarHeight * 1.5};
+      height: #{variable.$headerAvatarHeight * 1.5};
+      width: #{variable.$headerAvatarHeight * 1.5};
       .text {
         font-size: 1.73em !important;
       }
     }
 
     &-fill {
-      background-color: $whiteColor;
+      background-color: variable.$whiteColor;
     }
     &:hover,
     &:active,
     &:focus,
     &.active {
-      background-color: $mainColor;
-      color: $whiteColor;
+      background-color: variable.$mainColor;
+      color: variable.$whiteColor;
     }
   }
 
   &-notification {
     &-wrapper {
       margin-right: 12px;
-      width: $headerNotiWidth;
-      padding: $pageContentPadding;
-      border-radius: $boxBorderRad1;
-      background-color: $whiteColor;
+      width: variable.$headerNotiWidth;
+      padding: variable.$pageContentPadding;
+      border-radius: variable.$boxBorderRad1;
+      background-color: variable.$whiteColor;
       position: absolute;
-      top: $headerHeightMb;
-      right: $headerAvatarHeight;
+      top: variable.$headerHeightMb;
+      right: variable.$headerAvatarHeight;
       box-sizing: border-box;
-      box-shadow: 0 3px 6px -4px $black1f, 0 6px 16px 0 $black14, 0 9px 28px 8px $blackd;
+      box-shadow: 0 3px 6px -4px variable.$black1f, 0 6px 16px 0 variable.$black14, 0 9px 28px 8px variable.$blackd;
       transition: all 0.25s ease-in;
       visibility: hidden;
       opacity: 0;
 
       &.show-noti {
-        top: $headerHeight;
+        top: variable.$headerHeight;
         opacity: 1;
         z-index: 1090;
         visibility: visible;
@@ -246,12 +248,12 @@
       }
 
       .span-notification {
-        height: $pageContentRadius;
-        width: $pageContentRadius;
-        background-color: $whiteColor;
+        height: variable.$pageContentRadius;
+        width: variable.$pageContentRadius;
+        background-color: variable.$whiteColor;
         position: absolute;
         top: -6px;
-        right: $dcIconHeight;
+        right: variable.$dcIconHeight;
         transform: rotate(45deg);
       }
 
@@ -277,7 +279,7 @@
 
         &-title{
           font-size: 1.2rem;
-          color: $mainColor;
+          color: variable.$mainColor;
           margin-bottom: 0;
           margin-right: 10px;
         }
@@ -301,7 +303,7 @@
       .top {
         display: flex;
         align-items: center;
-        color: $mainColor;
+        color: variable.$mainColor;
         .left,
         .right {
           font-size: 0.9em !important;
@@ -321,12 +323,12 @@
           margin-right: 10px;
           padding: 2px 10px;
           border-radius: 7px;
-          border: 1px solid $mainColor;
+          border: 1px solid variable.$mainColor;
           transition: all 0.5s ease-out;
           &:hover, &.active {
-            background: $mainColor;
-            color: $whiteColor;
-            border-color: $mainColor;
+            background: variable.$mainColor;
+            color: variable.$whiteColor;
+            border-color: variable.$mainColor;
           }
         }
       }
@@ -348,11 +350,11 @@
           width: 65%;
           .title {
             font-size: 1.33em;
-            color: $blackColor;
+            color: variable.$blackColor;
             margin-bottom: 4px;
           }
           p {
-            color: $blackColor;
+            color: variable.$blackColor;
             font-size: 1em !important;
             margin-bottom: 5px;
             max-width: 100%;
@@ -361,9 +363,9 @@
           }
           .bottom {
             margin-top: 32px;
-            color: $mainColor;
+            color: variable.$mainColor;
             a {
-              color: $mainColor;
+              color: variable.$mainColor;
               text-decoration: none;
             }
           }
@@ -375,7 +377,7 @@
             position: relative;
 
             .content {
-              color: $blackColor;
+              color: variable.$blackColor;
               font-size: 1em;
               margin-top: 5px;
               // overflow: hidden;
@@ -390,9 +392,9 @@
               margin-bottom: 5px;
             }
             &:hover {
-              background-color: $mainColor;
+              background-color: variable.$mainColor;
               .content {
-                color: $whiteColor;
+                color: variable.$whiteColor;
               }
             }
             &.is-new {
@@ -407,7 +409,7 @@
               width: 5px;
               height: 5px;
               border-radius: 50%;
-              background: $mainColor;
+              background: variable.$mainColor;
               top: calc(50% - 10px);
               left: 0px;
               display: none;
@@ -436,7 +438,7 @@
       width: 143px;
       padding: 12px 16px;
       border-radius: 10px;
-      background-color: $whiteColor;
+      background-color: variable.$whiteColor;
       top: 134px;
       right: 44px;
       box-sizing: border-box;
@@ -450,12 +452,12 @@
       .arrow{
         height: 8px;
         width: 8px;
-        background-color: $whiteColor;
+        background-color: variable.$whiteColor;
         position: absolute;
         top: -4px;
         right: 13px;
         transform: rotate(45deg);
-        border-color: $whiteColor #0000 #0000 $whiteColor;
+        border-color: variable.$whiteColor #0000 #0000 variable.$whiteColor;
         box-shadow: -2px -2px 5px #0000000f;
       }
     }
@@ -474,7 +476,7 @@
 
         &-title{
           font-size: 1.2rem;
-          color: $mainColor;
+          color: variable.$mainColor;
           margin-bottom: 0;
         }
 
@@ -496,7 +498,7 @@
       .top {
         display: flex;
         align-items: center;
-        color: $mainColor;
+        color: variable.$mainColor;
         .left,
         .right {
           font-size: 0.9em !important;
@@ -516,12 +518,12 @@
           margin-right: 10px;
           padding: 2px 10px;
           border-radius: 7px;
-          border: 1px solid $mainColor;
+          border: 1px solid variable.$mainColor;
           transition: all 0.5s ease-out;
           &:hover, &.active {
-            background: $mainColor;
-            color: $whiteColor;
-            border-color: $mainColor;
+            background: variable.$mainColor;
+            color: variable.$whiteColor;
+            border-color: variable.$mainColor;
           }
         }
       }
@@ -538,11 +540,11 @@
           width: 65%;
           .title {
             font-size: 1.33em;
-            color: $blackColor;
+            color: variable.$blackColor;
             margin-bottom: 4px;
           }
           p {
-            color: $blackColor;
+            color: variable.$blackColor;
             font-size: 1em !important;
             margin-bottom: 5px;
             max-width: 100%;
@@ -551,9 +553,9 @@
           }
           .bottom {
             margin-top: 32px;
-            color: $mainColor;
+            color: variable.$mainColor;
             a {
-              color: $mainColor;
+              color: variable.$mainColor;
               text-decoration: none;
             }
           }
@@ -565,7 +567,7 @@
             position: relative;
 
             .content {
-              color: $blackColor;
+              color: variable.$blackColor;
               font-size: 1em;
               margin-top: 5px;
               // overflow: hidden;
@@ -580,9 +582,9 @@
               margin-bottom: 5px;
             }
             &:hover {
-              background-color: $mainColor;
+              background-color: variable.$mainColor;
               .content {
-                color: $whiteColor;
+                color: variable.$whiteColor;
               }
             }
             &.is-new {
@@ -597,7 +599,7 @@
               width: 5px;
               height: 5px;
               border-radius: 50%;
-              background: $mainColor;
+              background: variable.$mainColor;
               top: calc(50% - 10px);
               left: 0px;
               display: none;
@@ -613,26 +615,26 @@
 }
 
 &-sidebar {
-  width: #{$sideBarWidth} !important;
-  flex: 0 0 #{$sideBarWidth} !important;
-  max-width: #{$sideBarWidth} !important;
-  min-width: #{$sideBarWidth} !important;
-  width: #{$sideBarWidth} !important;
+  width: #{variable.$sideBarWidth} !important;
+  flex: 0 0 #{variable.$sideBarWidth} !important;
+  max-width: #{variable.$sideBarWidth} !important;
+  min-width: #{variable.$sideBarWidth} !important;
+  width: #{variable.$sideBarWidth} !important;
   box-shadow: 2px 4px 10px 0 rgba(0, 0, 0, 0.05);
   scroll-behavior: smooth;
 
   &-logo {
-    height: $headerHeight;
-    background-color: $mainColor;
+    height: variable.$headerHeight;
+    background-color: variable.$mainColor;
     display: flex;
     position: fixed;
     top: 0;
     left: 0;
     z-index: 5;
-    width: #{$sideBarWidth} !important;
+    width: #{variable.$sideBarWidth} !important;
 
     .logo {
-      max-width: $sideBarLogoWidth;
+      max-width: variable.$sideBarLogoWidth;
       transition: all 0.23s ease;
       filter: brightness(0) invert(1);
     }
@@ -647,41 +649,41 @@
   }
 
   &-wrapper {
-    height: calc(100vh - #{$headerHeight});
-    top: $headerHeight;
+    height: calc(100vh - #{variable.$headerHeight});
+    top: variable.$headerHeight;
     position: fixed;
     left: 0;
-    width: #{$sideBarWidth} !important;
+    width: #{variable.$sideBarWidth} !important;
     transition: 0.23s all linear;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 
     ul {
-      width: #{$sideBarWidth} !important;
+      width: #{variable.$sideBarWidth} !important;
     }
 
     div {
-      width: #{$sideBarWidth} !important;
+      width: #{variable.$sideBarWidth} !important;
     }
   }
 
   .ant-layout-sider-children {
-    background-color: $whiteColor;
+    background-color: variable.$whiteColor;
   }
 
   &-menu {
     height: 100%;
-    min-height: calc(100vh - #{$headerHeight * 2});
-    max-height: calc(100vh - #{$headerHeight});
+    min-height: calc(100vh - #{variable.$headerHeight * 2});
+    max-height: calc(100vh - #{variable.$headerHeight});
     overflow: hidden auto;
 
     .item {
       line-height: unset !important;
-      padding: calc($menuItemPadding / 8) calc($menuItemPadding / 2) 0 calc($menuItemPadding / 2) !important;
-      min-height: $menuItemHeight;
+      padding: calc(variable.$menuItemPadding / 8) calc(variable.$menuItemPadding / 2) 0 calc(variable.$menuItemPadding / 2) !important;
+      min-height: variable.$menuItemHeight;
       box-sizing: border-box;
-      line-height: calc($menuItemHeight / 2);
+      line-height: calc(variable.$menuItemHeight / 2);
       margin-bottom: 0;
       margin-top: 0;
       transition: all 0.05s ease-out;
@@ -699,8 +701,8 @@
         display: flex;
         align-items: center;
         height: 100%;
-        min-height: $menuItemHeight - 4;
-        padding: $menuItemWrapperPadding;
+        min-height: variable.$menuItemHeight - 4;
+        padding: variable.$menuItemWrapperPadding;
         flex-direction: row;
         width: 100%;
 
@@ -713,10 +715,10 @@
 
           svg {
             display: inline-flex;
-            width: $menuItemIconWidth;
-            height: $menuItemIconWidth;
-            fill: $mainColor;
-            padding-right: $menuItemWrapperPadding;
+            width: variable.$menuItemIconWidth;
+            height: variable.$menuItemIconWidth;
+            fill: variable.$mainColor;
+            padding-right: variable.$menuItemWrapperPadding;
           }
 
           &.open {
@@ -728,10 +730,10 @@
 
           svg {
             display: inline-flex;
-            width: $menuItemIconWidth;
-            height: $menuItemIconWidth;
-            fill: $mainColor;
-            padding-right: $menuItemWrapperPadding;
+            width: variable.$menuItemIconWidth;
+            height: variable.$menuItemIconWidth;
+            fill: variable.$mainColor;
+            padding-right: variable.$menuItemWrapperPadding;
           }
 
           &.open {
@@ -740,13 +742,13 @@
         }
 
         .text {
-          width: calc(100% - #{$menuItemIconWidth} + #{$menuItemWrapperPadding});
-          color: $mainColor;
+          width: calc(100% - #{variable.$menuItemIconWidth} + #{variable.$menuItemWrapperPadding});
+          color: variable.$mainColor;
           display: block;
-          min-height: calc($menuItemHeight / 2);
+          min-height: calc(variable.$menuItemHeight / 2);
           white-space: normal;
           word-wrap: break-word;
-          line-height: calc($menuItemHeight / 2);
+          line-height: calc(variable.$menuItemHeight / 2);
         }
 
         .title {
@@ -759,12 +761,12 @@
         &:focus,
         &:active,
         &.active {
-          background-color: $mainColor;
+          background-color: variable.$mainColor;
           border-radius: 5px;
 
           >.text,
           >.title>.text {
-            color: $whiteColor;
+            color: variable.$whiteColor;
           }
 
           .icon {
@@ -781,7 +783,7 @@
       &:focus,
       &:active,
       &.ant-menu-item-selected {
-        background-color: $whiteColor;
+        background-color: variable.$whiteColor;
       }
 
       &-parent {
@@ -795,23 +797,23 @@
           &::before {
             content: '';
             position: absolute;
-            right: calc($menuItemHeight / 5) !important;
+            right: calc(variable.$menuItemHeight / 5) !important;
             top: 0;
             background-color: colorMainRgba(0.12);
             transition: top 0.12s 0.45s cubic-bezier(0.25, 0.46, 0.52, 0.8),
               height 0.63s cubic-bezier(0.25, 0.46, 0.45, 0.94);
             width: 8px;
-            height: $menuItemHeight;
+            height: variable.$menuItemHeight;
             border-radius: 5px;
           }
 
           .children {
             .item {
-              padding-left: calc($menuItemHeight / 5) !important;
-              padding-right: calc($menuItemHeight / 4) !important;
+              padding-left: calc(variable.$menuItemHeight / 5) !important;
+              padding-right: calc(variable.$menuItemHeight / 4) !important;
 
               .wrap {
-                padding-left: calc($menuItemWrapperPadding / 2);
+                padding-left: calc(variable.$menuItemWrapperPadding / 2);
 
                 .icon {
                   stroke: black;
@@ -824,35 +826,35 @@
                 &:focus,
                 &:active,
                 &.active {
-                  background-color: $headerMidVgColor;
+                  background-color: variable.$headerMidVgColor;
 
                   .text {
-                    color: $mainColor;
+                    color: variable.$mainColor;
                   }
 
                   .icon {
                     filter: none;
-                    fill: $mainColor;
-                    stroke: $mainColor;
+                    fill: variable.$mainColor;
+                    stroke: variable.$mainColor;
                   }
 
                   img {
                     filter: none;
-                    fill: $mainColor;
-                    stroke: $mainColor;
+                    fill: variable.$mainColor;
+                    stroke: variable.$mainColor;
                   }
                 }
               }
 
               &.level-2 {
-                padding-left: #{$menuItemPadding * 3} !important;
+                padding-left: #{variable.$menuItemPadding * 3} !important;
               }
             }
           }
 
           &.open {
             height: auto;
-            background-color: $whiteColor;
+            background-color: variable.$whiteColor;
 
             &::before {
               top: 100%;
@@ -865,15 +867,15 @@
 
     .divider {
       width: 100%;
-      background-color: $menuLine;
+      background-color: variable.$menuLine;
       height: 0.5px;
       display: block;
-      margin: calc($menuItemPadding / 2) 0;
+      margin: calc(variable.$menuItemPadding / 2) 0;
     }
   }
 
   &-copy {
-    color: $mainColor;
+    color: variable.$mainColor;
     // height: $headerHeight;
     display: flex;
     align-items: center;
@@ -886,11 +888,11 @@
   &-toggle {
     display: none;
     position: fixed;
-    left: $toggleLeft;
-    top: $toggleTop;
-    height: $toggleHeight;
-    width: $toggleHeight;
-    background-color: $mainColor;
+    left: variable.$toggleLeft;
+    top: variable.$toggleTop;
+    height: variable.$toggleHeight;
+    width: variable.$toggleHeight;
+    background-color: variable.$mainColor;
     z-index: 9;
     border-radius: 5px;
     align-items: center;
@@ -899,15 +901,15 @@
     transform-origin: center center;
 
     .icon {
-      fill: $whiteColor;
-      height: $toggleIconWidth;
-      width: $toggleIconWidth;
+      fill: variable.$whiteColor;
+      height: variable.$toggleIconWidth;
+      width: variable.$toggleIconWidth;
     }
     img {
       filter: brightness(0) invert(1);
-      fill: $whiteColor;
-      height: $toggleIconWidth;
-      width: $toggleIconWidth;
+      fill: variable.$whiteColor;
+      height: variable.$toggleIconWidth;
+      width: variable.$toggleIconWidth;
     }
   }
 
@@ -921,10 +923,10 @@
     text-align: center;
     padding: 1px 6px;
     border-radius: 4px;
-    color: $mainColor;
+    color: variable.$mainColor;
     font-weight: 600;
-    box-shadow: inset 0 0 0 1px $mainColor;
-    background-color: $whiteColor;
+    box-shadow: inset 0 0 0 1px variable.$mainColor;
+    background-color: variable.$whiteColor;
     font-size: 10px !important;
   }
 }
@@ -932,13 +934,13 @@
 &-page {
   $padBottom: 60px;
 
-  padding: $pageContentPadding;
+  padding: variable.$pageContentPadding;
   box-sizing: border-box;
-  min-height: calc(100vh - #{$headerHeight} - #{$pageContentPadding * 2});
+  min-height: calc(100vh - #{variable.$headerHeight} - #{variable.$pageContentPadding * 2});
   display: block;
   box-sizing: border-box;
-  border-radius: $pageContentRadius;
-  background-color: $whiteColor;
+  border-radius: variable.$pageContentRadius;
+  background-color: variable.$whiteColor;
   max-width: 100%;
   overflow-x: hidden;
   &-content {
@@ -946,16 +948,16 @@
   }
   &-title {
     .icon {
-      width: $pageTitleIconWidth;
-      height: $pageTitleIconWidth;
+      width: variable.$pageTitleIconWidth;
+      height: variable.$pageTitleIconWidth;
       padding-right: 12px;
     }
     img {
-      width: $pageTitleIconWidth;
-      height: $pageTitleIconWidth;
+      width: variable.$pageTitleIconWidth;
+      height: variable.$pageTitleIconWidth;
       padding-right: 12px;
     }
-    color: $mainColor;
+    color: variable.$mainColor;
     font-size: 1.2rem !important;
     .text {
       font-size: 1.2rem !important;
@@ -966,7 +968,7 @@
   }
   &-sub-title {
     font-weight: 400;
-    color: $grey;
+    color: variable.$grey;
     font-size: 1rem;
   }
   &-footer {
@@ -976,13 +978,13 @@
       position: fixed;
       bottom: 0;
       height: #{$padBottom};
-      background-color: $whiteColor;
-      border-radius: #{$pageContentRadius} #{$pageContentRadius} 0 0;
+      background-color: variable.$whiteColor;
+      border-radius: #{variable.$pageContentRadius} #{variable.$pageContentRadius} 0 0;
       align-items: center;
       display: flex;
       justify-content: flex-end;
-      padding: 0 #{$pageContentPadding};
-      transform: translateX(-#{$pageContentPadding});
+      padding: 0 #{variable.$pageContentPadding};
+      transform: translateX(-#{variable.$pageContentPadding});
       z-index: 10;
       box-shadow: 0px -1px 4px 0px rgb(0 0 0 / 5%);
       align-items: center;
@@ -1001,7 +1003,7 @@
 
   width: $height;
   height: $height;
-  border: 1px solid $grey;
+  border: 1px solid variable.$grey;
   position: fixed;
   z-index: 10;
   right: 10px;
@@ -1010,7 +1012,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  color: $grey;
+  color: variable.$grey;
   cursor: pointer;
   transition: all 0.23s cubic-bezier(0.17, 0.67, 0.83, 0.67);
 
@@ -1036,20 +1038,20 @@
   &:hover,
   &:active,
   &:focus {
-    border-color: $mainColor;
-    color: $whiteColor;
-    background-color: $mainColor;
+    border-color: variable.$mainColor;
+    color: variable.$whiteColor;
+    background-color: variable.$mainColor;
     box-shadow: 0 0 10px #{colorMainRgba(0.59)}; // width: 150px;
     .text {
       width: calc(150px - #{$height});
       padding: 0 4px;
     }
     .icon {
-      fill: $whiteColor;
+      fill: variable.$whiteColor;
     }
     img {
       filter: brightness(0) invert(1);
-      fill: $whiteColor;
+      fill: variable.$whiteColor;
     }
   }
 
@@ -1061,7 +1063,7 @@
   }
 }
 
-@media only screen and (max-width: #{$breakPointRetina}) and (min-width: #{$breakPointMbMin}) {
+@media only screen and (max-width: #{variable.$breakPointRetina}) and (min-width: #{variable.$breakPointMbMin}) {
   &-manager-header {
     &-wrapper {
       .left {
@@ -1084,7 +1086,7 @@
   }
 }
 
-@media only screen and (max-width: #{$breakPointMb}) {
+@media only screen and (max-width: #{variable.$breakPointMb}) {
   &-wrapper {
 
     .ant-layout-sider {
@@ -1092,8 +1094,8 @@
     }
   }
   &-manager-header {
-    height: $headerHeightMb;
-    background-color: $mainColor;
+    height: variable.$headerHeightMb;
+    background-color: variable.$mainColor;
     box-shadow: none;
     &-wrapper {
       position: fixed;
@@ -1136,7 +1138,7 @@
         box-sizing: border-box;
         max-width: unset;
         width: 100%;
-        background-color: $menuLine;
+        background-color: variable.$menuLine;
         border-radius: 12px;
         margin: 2.3rem auto 0 auto;
         padding: 1.1rem 1.3rem;
@@ -1151,10 +1153,10 @@
             padding: 0.23rem;
             width: 100%;
             border-left: 0;
-            box-shadow: 0 0 0 1px $mainColor;
+            box-shadow: 0 0 0 1px variable.$mainColor;
             border-radius: 8px;
             margin-bottom: 12px;
-            background-color: $whiteColor;
+            background-color: variable.$whiteColor;
             overflow: auto;
 
             &::before {
@@ -1184,18 +1186,18 @@
             .text {
               display: block;
               text-align: left;
-              color: $mainColor;
+              color: variable.$mainColor;
               width: 100%;
               .select-lang {
                 width: 100% !important;
-                color: $mainColor;
+                color: variable.$mainColor;
                 nz-select-top-control {
                   padding-left: 0 !important;
                 }
               }
             }
             .text-mb-flex {
-              width: calc(100%) - #{$headerAvatarHeight};
+              width: calc(100%) - #{variable.$headerAvatarHeight};
               padding-left: 20px;
             }
           }
@@ -1209,7 +1211,7 @@
       }
     }
     &-ava {
-      width: #{$headerAvatarHeight};
+      width: #{variable.$headerAvatarHeight};
       // height: #{$headerAvatarHeight - 10} !important;
       flex: none;
       .text {
@@ -1224,7 +1226,7 @@
   }
 }
 
-@media only screen and (max-width: #{$breakPointMb}) {
+@media only screen and (max-width: #{variable.$breakPointMb}) {
   &-sidebar {
     position: fixed;
     left: 0px;
@@ -1233,7 +1235,7 @@
     height: 100%;
 
     &-logo {
-      height: $headerHeightMb;
+      height: variable.$headerHeightMb;
 
       .logo {
         max-height: 35px;
@@ -1241,7 +1243,7 @@
     }
 
     &-wrapper {
-      top: $headerHeightMb;
+      top: variable.$headerHeightMb;
       // left: -100%;
     }
 

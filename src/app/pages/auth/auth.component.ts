@@ -29,7 +29,9 @@ export class AuthComponent implements OnInit {
     private fb: FormBuilder,
     private router: Router,
     private firebaseService: FirebaseService,
-  ) { }
+  ) {
+    this.firebaseService.initAuth().subscribe(resp => {});
+  }
 
   ngOnInit() {
     // this.initLoginForm();
@@ -74,7 +76,7 @@ export class AuthComponent implements OnInit {
   loginWithGoogle() {
     this.firebaseService.googleLogin().subscribe({
       next: user => {
-        this.router.navigate([ROUTE.AUTH]);
+        this.router.navigate([ROUTE.HOME]);
       },
       error: error => {
         console.error(error);

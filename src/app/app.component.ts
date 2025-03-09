@@ -2,12 +2,9 @@ import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RouterOutlet } from '@angular/router';
-import { SVG_DATA } from '@enums';
 import { TranslateService } from '@ngx-translate/core';
-import { SvgIconRegistryService } from 'angular-svg-icon';
-import { FirebaseService } from 'common-service';
-import { forkJoin, Observable } from 'rxjs';
-import { environment } from '~environments/environment';
+import { AppConfigService, FirebaseService } from 'common-service';
+import { NzIconModule } from 'ng-zorro-antd/icon';
 
 @Component({
   selector: 'tt-root',
@@ -19,28 +16,23 @@ import { environment } from '~environments/environment';
     CommonModule,
     FormsModule,
     ReactiveFormsModule,
+    NzIconModule,
   ],
 })
 export class AppComponent implements OnInit {
 
   constructor(
-    private fbService: FirebaseService,
-    private iconReg: SvgIconRegistryService,
     private translateService: TranslateService,
+    private firebaseService: FirebaseService,
+    private appconfig: AppConfigService,
   ) {}
 
   ngOnInit(): void {
-    this.fbService.init().subscribe(resp => {});
-
     this.translateService.addLangs(['vi']);
     this.translateService.setDefaultLang('vi');
     this.translateService.use('vi');
 
-    const svgRegisReqs: Array<Observable<SVGElement | undefined>> = [];
-    SVG_DATA.forEach(svg => {
-      svgRegisReqs.push(this.iconReg.loadSvg(`${environment.assetsUrl}/assets/icons/${svg.path}`, svg.key) as Observable<SVGElement | undefined>);
-    });
-
-    forkJoin(svgRegisReqs).subscribe(resp => {})
+    this.firebaseService.init().subscribe(resp => {});
+    this.appconfig.init();
   }
 }

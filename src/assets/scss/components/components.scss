@@ -1,0 +1,76 @@
+@use "sass:meta";
+@use '../variable.scss';
+
+@layer components {
+  @include meta.load-css('./login.scss');
+
+  .#{variable.$mainCls} {
+
+    &-align-left {
+      text-align: left;
+      justify-content: flex-start;
+      align-items: flex-start;
+    }
+
+    &-align-right {
+      text-align: right;
+      justify-content: flex-end;
+      align-items: flex-end;
+    }
+
+    &-align-center {
+      text-align: center;
+      justify-content: center;
+      align-items: center;
+    }
+
+    &-disabled {
+      opacity: 0.32;
+      pointer-events: none;
+      -webkit-user-select: none;
+      user-select: none;
+      filter: grayscale(0.9);
+      box-shadow: none;
+    }
+
+    &-required {
+
+      &-after {
+        &:after {
+          display: inline-block;
+          margin-right: 4px;
+          color: #ff4d4f;
+          font-size: 0.9em;
+          vertical-align: top;
+          padding-left: 2px;
+          content: '*';
+        }
+      }
+
+      &-before {
+        &:before {
+          display: inline-block;
+          margin-left: 4px;
+          color: #ff4d4f;
+          font-size: 0.9em;
+          vertical-align: top;
+          padding-right: 2px;
+          content: '*';
+        }
+      }
+    }
+
+    &-koho {
+      font-family: 'Koho' !important;
+    }
+
+    &-col-action {
+      width: 100%;
+      min-width: fit-content;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+    }
+  }
+}
